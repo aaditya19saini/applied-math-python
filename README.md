@@ -25,10 +25,28 @@ We simulate **10,000 tosses** of a slightly biased coin (P(heads) = 0.51) across
 
 ---
 
+### 2. Monte Carlo Integration
+
+> *Approximate definite integrals using random sampling instead of deterministic grids.*
+
+**Notebook:** [`monte_carlo_integrations.ipynb`](monte_carlo_integrations.ipynb) | **Explainer:** [`monte_carlo_integration.md`](monte_carlo_integration.md)
+
+We compute the integral $\int_{0}^{4}\sqrt[4]{15x^3+21x^2+41x+3} \cdot e^{-0.5x}\,dx$ using random sampling, compare it against Riemann sums, and visualize how the estimate converges to the true value as the sample size grows.
+
+![Monte Carlo Convergence](images/mc_convergence.png)
+
+**Key observations:**
+- Monte Carlo estimates converge to the true integral value as sample count increases.
+- The distribution of estimates follows a normal distribution (Central Limit Theorem).
+- The method scales to high-dimensional problems where grid-based methods fail.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Python 3**
 - **NumPy** — numerical computation & random sampling
+- **SciPy** — scientific computing & numerical integration
 - **Matplotlib** — data visualization
 
 ## 📦 Getting Started
@@ -39,7 +57,7 @@ git clone <repo-url>
 cd Stat_maths
 
 # Install dependencies
-pip install numpy matplotlib
+pip install numpy matplotlib scipy
 
 # Open the notebooks
 jupyter notebook
@@ -51,7 +69,7 @@ This is a living project. More topics will be added over time, including but not
 
 - [ ] Central Limit Theorem
 - [ ] Bayes' Theorem
-- [ ] Monte Carlo Simulations
+- [x] Monte Carlo Integration
 - [ ] Probability Distributions
 - [ ] Hypothesis Testing
 - [ ] Markov Chains
