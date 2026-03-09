@@ -42,6 +42,23 @@ We compute the integral $\int_{0}^{4}\sqrt[4]{15x^3+21x^2+41x+3} \cdot e^{-0.5x}
 
 ---
 
+### 3. Bayes' Theorem
+
+> *A positive test result doesn't mean what you think it means — when the condition is rare, false positives dominate.*
+
+**Notebook:** [`bayes_theorem.ipynb`](bayes_theorem.ipynb) | **Explainer:** [`bayes_theorem.md`](bayes_theorem.md)
+
+We explore Bayes' Theorem through a drug testing scenario: a test with 97% sensitivity and 95% specificity is applied to a population where only 0.5% are actual users. Despite the test's apparent accuracy, a positive result only implies an ~8.9% chance the person is a user. The notebook investigates how prevalence, sensitivity, and specificity each affect the posterior probability, and demonstrates **sequential Bayesian updating** across multiple test rounds.
+
+![Bayes Prevalence](images/bayes_prevalence.png)
+
+**Key observations:**
+- Low prevalence causes even accurate tests to produce mostly false positives (base rate fallacy).
+- Specificity has the strongest effect on posterior probability when conditions are rare.
+- Sequential testing (using the posterior as the next prior) rapidly increases confidence — 3 positive tests bring it from 8.9% to 97.3%.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Python 3**
@@ -68,7 +85,7 @@ jupyter notebook
 This is a living project. More topics will be added over time, including but not limited to:
 
 - [ ] Central Limit Theorem
-- [ ] Bayes' Theorem
+- [x] Bayes' Theorem
 - [x] Monte Carlo Integration
 - [ ] Probability Distributions
 - [ ] Hypothesis Testing
