@@ -59,6 +59,22 @@ We explore Bayes' Theorem through a drug testing scenario: a test with 97% sensi
 
 ---
 
+### 4. Brownian Motion & Stock Price Simulation
+
+> *Random walks, Wiener processes, and modeling stock prices with Geometric Brownian Motion.*
+
+**Notebook:** [`brownian_motion.ipynb`](brownian_motion.ipynb) | **Explainer:** [`brownian_motion.md`](brownian_motion.md)
+
+We implement a `Brownian` class that generates random walks, Gaussian-increment Brownian motion, and stock price simulations using the Geometric Brownian Motion model $S(t) = S(0)\exp\left[(\mu - \sigma^2/2)t + \sigma W(t)\right]$. The notebook explores how volatility $\sigma$ controls the spread of simulated stock prices and visualizes 2D Brownian paths.
+
+**Key observations:**
+- Random walks converge to continuous Brownian motion as step size shrinks (Donsker's theorem).
+- Small changes in volatility have outsized effects on price uncertainty due to the exponential structure of GBM.
+- 2D Brownian motion produces fractal trajectories with Hausdorff dimension 2.
+- Past movements give zero information about future direction — each increment is independent.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Python 3**
@@ -89,6 +105,7 @@ This is a living project. More topics will be added over time, including but not
 - [x] Monte Carlo Integration
 - [ ] Probability Distributions
 - [ ] Hypothesis Testing
+- [x] Brownian Motion & Stock Simulation
 - [ ] Markov Chains
 - [ ] Regression Analysis
 
