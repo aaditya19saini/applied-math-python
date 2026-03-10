@@ -67,6 +67,14 @@ We explore Bayes' Theorem through a drug testing scenario: a test with 97% sensi
 
 We implement a `Brownian` class that generates random walks, Gaussian-increment Brownian motion, and stock price simulations using the Geometric Brownian Motion model $S(t) = S(0)\exp\left[(\mu - \sigma^2/2)t + \sigma W(t)\right]$. The notebook explores how volatility $\sigma$ controls the spread of simulated stock prices and visualizes 2D Brownian paths.
 
+![Random Walk](images/bm_random_walk.png)
+
+![Brownian Motion (Normal Increments)](images/bm_normal.png)
+
+![Stock Price Simulation (GBM)](images/bm_stock_price.png)
+
+![2D Brownian Motion](images/bm_2d.png)
+
 **Key observations:**
 - Random walks converge to continuous Brownian motion as step size shrinks (Donsker's theorem).
 - Small changes in volatility have outsized effects on price uncertainty due to the exponential structure of GBM.
